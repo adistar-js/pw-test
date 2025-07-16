@@ -70,7 +70,7 @@ const FormModal: React.FC<FormModalProps> = ({ open, onClose, onConfirm }) => {
       )}
       {open && !loading && !showSuccess && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
-          <div className="bg-gray-900 rounded-3xl p-8 w-full max-w-md mx-4 relative">
+          <div className="bg-[#09090B] rounded-3xl p-8 w-full max-w-md mx-4 relative">
             {/* Header */}
             <div className="flex justify-between items-center mb-8">
               <h2 className="text-white text-2xl font-medium">Details</h2>

@@ -42,32 +42,35 @@ export default function PiBoxUI() {
                 <span className="text-white text-8xl font-black tracking-widest opacity-40 mr-2" style={{writingMode: 'vertical-rl', transform: 'rotate(180deg)', letterSpacing: '0.2em', fontFamily: 'Archivo Black, sans-serif'}}>Pi Box</span>
                 <span className="text-white text-8xl font-black tracking-widest opacity-70" style={{writingMode: 'vertical-rl', transform: 'rotate(180deg)', letterSpacing: '0.2em', fontFamily: 'Archivo Black, sans-serif'}}>Pi Box</span>
               </div>
-              <img src="/box.png" alt="Pi Box" className="w-[520px] h-[520px] object-contain drop-shadow-2xl relative z-20" />
+              <img src="/box.png" alt="Pi Box" className="w-[720px] h-[720px] object-contain drop-shadow-2xl absolute left-[28%] top-[50%] -translate-y-1/2 z-50" />
             </div>
           </div>
   
-          <div className="flex-1 flex flex-col items-start p-8 pl-12"> {/* Increased left padding */}
-  <div className="backdrop-blur-lg rounded-[2.5rem] shadow-lg p-8 w-full max-w-lg flex flex-col items-center relative border border-white/20" style={{background: '#36436773'}}> {/* Colored glass effect */}
-    <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white">Pi Box Basic</h1>
-    <h2 className="text-2xl font-semibold mb-4 text-white">Whats Inside:</h2>
-    <ul className="space-y-3 mb-6">
-      <li className="flex items-center gap-3 text-white text-lg"><Check className="w-5 h-5 text-blue-200" /> Core Pi Box device</li>
-      <li className="flex items-center gap-3 text-white text-lg"><Check className="w-5 h-5 text-blue-200" /> Essential Cables & Power Adapter</li>
-      <li className="flex items-center gap-3 text-white text-lg"><Check className="w-5 h-5 text-blue-200" /> Input Devices (Mouse, Keyboard)</li>
-      <li className="flex items-center gap-3 text-white text-lg"><Check className="w-5 h-5 text-blue-200" /> Compatible with all Projectors, Monitors & TV's</li>
-    </ul>
-    <div className="mb-6">
-      <h3 className="text-lg font-medium mb-2 text-white">Add Ons</h3>
-      <div className="flex gap-4">
-        <div className="flex items-center gap-2 bg-white/20 rounded-lg px-4 py-2 border border-white/30 text-white font-medium"><Camera className="w-5 h-5 mr-1 text-white" /> Webcam</div>
-        <div className="flex items-center gap-2 bg-white/20 rounded-lg px-4 py-2 border border-white/30 text-white font-medium"><Monitor className="w-5 h-5 mr-1 text-white" /> LED Monitor <span className="text-xs text-blue-100">(19 Inch)</span></div>
-      </div>
-    </div>
-    <button className="w-full bg-[#121516] text-white py-3 rounded-xl text-lg font-semibold border-2 border-[#23272f] hover:bg-[#23272f] transition-colors" onClick={() => setModalOpen(true)}>
-      Buy Now
-    </button>
-  </div>
-</div>
+          <div className="flex-1 flex flex-row items-start pl-80 pr-12 py-12 relative" style={{minHeight: '650px'}}>
+            <div className="w-40 h-full"></div> {/* New spacer div */}
+            <div className="backdrop-blur-lg rounded-[2.5rem] shadow-lg pl-64 pr-8 py-8 w-[720px] max-w-none flex flex-col items-end border border-white/20" style={{background: '#36436773', position: 'absolute', left: '-30%', top: '50%', transform: 'translateY(-50%)', zIndex: 30}}> {/* Colored glass effect, overlap left */}
+              <div className="flex flex-col w-full items-end gap-4">
+                <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white">Pi Box Basic</h1>
+                <h2 className="text-2xl font-semibold mb-4 text-white">Whats Inside:</h2>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-center gap-3 text-white text-lg"><Check className="w-5 h-5 text-blue-200" /> Core Pi Box device</li>
+                  <li className="flex items-center gap-3 text-white text-lg"><Check className="w-5 h-5 text-blue-200" /> Essential Cables & Power Adapter</li>
+                  <li className="flex items-center gap-3 text-white text-lg"><Check className="w-5 h-5 text-blue-200" /> Input Devices (Mouse, Keyboard)</li>
+                  <li className="flex items-center gap-3 text-white text-lg"><Check className="w-5 h-5 text-blue-200" /> Compatible with all Projectors, Monitors & TV's</li>
+                </ul>
+                <div className="mb-6">
+                  <h3 className="text-lg font-medium mb-2 text-white">Add Ons</h3>
+                  <div className="flex gap-4">
+                    <div className="flex items-center gap-2 bg-white/20 rounded-lg px-4 py-2 border border-white/30 text-white font-medium"><Camera className="w-5 h-5 mr-1 text-white" /> Webcam</div>
+                    <div className="flex items-center gap-2 bg-white/20 rounded-lg px-4 py-2 border border-white/30 text-white font-medium"><Monitor className="w-5 h-5 mr-1 text-white" /> LED Monitor <span className="text-xs text-blue-100">(19 Inch)</span></div>
+                  </div>
+                </div>
+                <button className="w-full bg-[#121516] text-white py-3 rounded-xl text-lg font-semibold border-2 border-[#23272f] hover:bg-[#23272f] transition-colors" onClick={() => setModalOpen(true)}>
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
